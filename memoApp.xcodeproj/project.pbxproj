@@ -14,6 +14,9 @@
 		5D4F099D2A503AA400A36E48 /* memoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F099C2A503AA400A36E48 /* memoAppTests.swift */; };
 		5D4F09A72A503AA400A36E48 /* memoAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F09A62A503AA400A36E48 /* memoAppUITests.swift */; };
 		5D4F09A92A503AA400A36E48 /* memoAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F09A82A503AA400A36E48 /* memoAppUITestsLaunchTests.swift */; };
+		5D4F09B72A529A4800A36E48 /* MemoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F09B62A529A4800A36E48 /* MemoList.swift */; };
+		5D4F09BA2A529FAA00A36E48 /* MemoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F09B92A529FAA00A36E48 /* MemoModel.swift */; };
+		5D4F09BD2A55422200A36E48 /* SampleProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4F09BC2A55422200A36E48 /* SampleProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,9 @@
 		5D4F09A22A503AA400A36E48 /* memoAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = memoAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D4F09A62A503AA400A36E48 /* memoAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoAppUITests.swift; sourceTree = "<group>"; };
 		5D4F09A82A503AA400A36E48 /* memoAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = memoAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5D4F09B62A529A4800A36E48 /* MemoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoList.swift; sourceTree = "<group>"; };
+		5D4F09B92A529FAA00A36E48 /* MemoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoModel.swift; sourceTree = "<group>"; };
+		5D4F09BC2A55422200A36E48 /* SampleProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +100,9 @@
 		5D4F098A2A503AA000A36E48 /* memoApp */ = {
 			isa = PBXGroup;
 			children = (
+				5D4F09BB2A55420300A36E48 /* Protocol */,
+				5D4F09B82A529F8A00A36E48 /* Model */,
+				5D4F09B52A529A2B00A36E48 /* View */,
 				5D4F098B2A503AA000A36E48 /* memoAppApp.swift */,
 				5D4F098D2A503AA000A36E48 /* ContentView.swift */,
 				5D4F098F2A503AA300A36E48 /* Assets.xcassets */,
@@ -125,6 +134,30 @@
 				5D4F09A82A503AA400A36E48 /* memoAppUITestsLaunchTests.swift */,
 			);
 			path = memoAppUITests;
+			sourceTree = "<group>";
+		};
+		5D4F09B52A529A2B00A36E48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5D4F09B62A529A4800A36E48 /* MemoList.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5D4F09B82A529F8A00A36E48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5D4F09B92A529FAA00A36E48 /* MemoModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5D4F09BB2A55420300A36E48 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				5D4F09BC2A55422200A36E48 /* SampleProtocol.swift */,
+			);
+			path = Protocol;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +291,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D4F098E2A503AA000A36E48 /* ContentView.swift in Sources */,
+				5D4F09BA2A529FAA00A36E48 /* MemoModel.swift in Sources */,
+				5D4F09B72A529A4800A36E48 /* MemoList.swift in Sources */,
 				5D4F098C2A503AA000A36E48 /* memoAppApp.swift in Sources */,
+				5D4F09BD2A55422200A36E48 /* SampleProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
