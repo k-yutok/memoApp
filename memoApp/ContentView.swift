@@ -1,58 +1,45 @@
 // Xcode 14.3.1
+// 疎結合低凝集
+
 
 import SwiftUI
 
 struct ContentView: View {
-
-    @State private var memolist = ["今日のメモ","Todo"]
-    @State private var  memolistSub = ["aa","bb","cc"]
- //   @State var editMode: Editmode = .inactive
+    
     var body: some View {
-        
-        // 参考: https://capibara1969.com/2266/
-        
-        NavigationView{
-            // ForEachを用いた動的リスト
-            List{
-                Section {
-                    
-                    ForEach(0 ..< memolist.count) { index in
-                        Text(memolist[index])
-                    }
-                    .onDelete(perform: rowRemove)
-                } header: {
-                    Text("TODO")
-                }
-                
-                // Section
-                Section {
-                    
-                    Text("aaa")
-                }header: {
-                    Text("memo")
-                }
-                //   Spacer(minLength: 20) // 空白 size:minLength
-            }
-            // Editボタン
-            .toolbar{
-              EditButton()
-            }
-            .listStyle(.insetGrouped)
+        memolist()
 
-            
-            // 削除はできなくなるがこの書き方もできる
-            /*
-             List(memolistSub, id: \.self){ memo in
-             Text(memo)
-             }
-             .listStyle(.plain) // Listのスタイル何も指定しない場合はDefaultListStyle()
-             */
-            
+    }
+}
+
+
+func memoCell() -> some View{
+    // 変数(メモ分)
+    List(1..<20){ memo in
+        // NavigationLinkでリンク先(遷移先)のviewを定義
+        NavigationLink(destination: Text("\(memo)番目のview")){
+            // 遷移前のものここにメモの見出しと日時を表示させる
+            HStack{
+                Image(systemName: "play")
+                VStack{
+                    Text("見出し")
+                    Text("日時")
+                }
+            }
         }
     }
-    
-    func rowRemove(offsets: IndexSet) {
-        memolist.remove(atOffsets: offsets)
+}
+// @Viewbuilderは複数のviewを返すときに使う。がなくても返せそう。本来どこで使用すべきなのかわからない。
+//@ViewBuilder
+func content() -> some View {
+    VStack{
+        Button(action: {}){
+            Image(systemName: "plus.circle.fill")
+                .resizable()
+                .frame(width:50,height: 50)
+            
+        }
+        .offset(y:10)
     }
 }
 
